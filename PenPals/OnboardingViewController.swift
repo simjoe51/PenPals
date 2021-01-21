@@ -18,6 +18,12 @@ class OnboardingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var yepButton: UIButton!
     @IBOutlet weak var idcButton: UIButton!
     
+    //age stack
+    @IBOutlet weak var ageDownButton: UIButton!
+    @IBOutlet weak var ageUpButton: UIButton!
+    @IBOutlet weak var ageLabel: UILabel!
+    
+    
     //MARK: Variables
     var yepSelected:Bool = false
     var idcSelected:Bool = false
@@ -114,6 +120,27 @@ class OnboardingViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //handle age buttons
+    var age:Int = 16
+    
+    @IBAction func ageDownButton(_ sender: UIButton) {
+        age -= 1
+        ageLabel.text = "Age: \(String(age))"
+        ageUpButton.isEnabled = true
+        if age == 13 {
+            ageDownButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func ageUpButton(_ sender: UIButton) {
+        age += 1
+        ageLabel.text = "Age: \(String(age))"
+        ageDownButton.isEnabled = true
+        if age == 17 {
+            ageUpButton.isEnabled = false
+        }
+    }
+    
     //user has selected and confirmed that they wish to continue without making use of advanced matching. This will bypass information collection and match them with the first person that matches age requirements for safety.
     @objc func continueWithoutMatching() {
         performSegue(withIdentifier: "continueWithoutMatching", sender: self)
@@ -124,11 +151,13 @@ class OnboardingViewController: UIViewController, UITextFieldDelegate {
             let vc = segue.destination as? MoreOnboardingViewController
             vc?.fullName = fullNameField.text!
             vc?.phoneNumber = phoneNumberField.text!
-            if yepSelected {
-                vc?.similar = true
-            } else {
-                vc?.similar = false
-            }
+            vc?.similar = true
+            vc?.age = age
+        } else if segue.destination is createAccountViewController {
+            let vc = segue.destination as? createAccountViewController
+            vc?.fullName = fullNameField.text!
+            vc?.phoneNumber = phoneNumberField.text!
+            vc?.age = age
         }
     }
 

@@ -18,9 +18,8 @@ class MoreOnboardingViewController: UIViewController, UITextFieldDelegate {
     var similar:Bool = false
     var fullName:String = ""
     var phoneNumber:String = ""
-    
-    //actually used in controller
     var age:Int = 16
+    
     
 
     override func viewDidLoad() {
@@ -32,21 +31,11 @@ class MoreOnboardingViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func ageUpButton(_ sender: UIButton) {
-        age += 1
-        ageLabel.text = "Age: \(String(age))"
-        ageDownButton.isEnabled = true
-        if age == 17 {
-            ageUpButton.isEnabled = false
-        }
+        
     }
     
     @IBAction func ageDownButton(_ sender: UIButton) {
-        age -= 1
-        ageLabel.text = "Age: \(String(age))"
-        ageUpButton.isEnabled = true
-        if age == 13 {
-            ageDownButton.isEnabled = false
-        }
+        
     }
     
     

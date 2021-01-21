@@ -115,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92i-Vg-z0G">
-                                <rect key="frame" x="15" y="64" width="384" height="618"/>
+                                <rect key="frame" x="15" y="64" width="384" height="658"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -124,10 +124,10 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pr-jg-FCv">
-                                <rect key="frame" x="15" y="787" width="384" height="70"/>
+                                <rect key="frame" x="15" y="807" width="384" height="50"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="EIA-eF-ZQn"/>
+                                    <constraint firstAttribute="height" constant="50" id="EIA-eF-ZQn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="27"/>
                                 <state key="normal" title="next">
@@ -135,7 +135,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -143,10 +143,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63k-Ly-xTV">
-                                <rect key="frame" x="15" y="702" width="384" height="70"/>
+                                <rect key="frame" x="15" y="742" width="384" height="50"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="tBo-kc-7Eg"/>
+                                    <constraint firstAttribute="height" constant="50" id="tBo-kc-7Eg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="27"/>
                                 <state key="normal" title="learn about privacy">
@@ -154,7 +154,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -166,14 +166,14 @@
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="light" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="light" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="phone number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x78-dc-WZH">
                                 <rect key="frame" x="40" y="401" width="334" height="34"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="light" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="light" smartDashesType="yes" textContentType="tel"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeJ-a1-oRM">
                                 <rect key="frame" x="81" y="99" width="252.5" height="42"/>
@@ -189,7 +189,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vli-IF-lnU">
-                                <rect key="frame" x="40" y="523" width="334" height="22"/>
+                                <rect key="frame" x="40" y="521" width="334" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAx-Hg-3bn">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="22"/>
@@ -223,6 +223,39 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AMS-lX-cgg">
+                                <rect key="frame" x="100" y="573" width="214.5" height="24.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpf-Gb-ZyO">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="24.5"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="minus.square" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ageDownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbV-o8-g8n"/>
+                                            <action selector="ageDownButton:" destination="e96-G0-46f" eventType="touchUpInside" id="ohk-6c-6lb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhX-Ui-Apo">
+                                        <rect key="frame" x="71.5" y="0.0" width="71.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR1-J1-Vn2">
+                                        <rect key="frame" x="143" y="0.0" width="71.5" height="24.5"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="plus.square" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ageUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0p-Tr-kYt"/>
+                                            <action selector="ageUpButton:" destination="e96-G0-46f" eventType="touchUpInside" id="v9E-2k-YcP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,12 +270,14 @@
                             <constraint firstItem="1Pr-jg-FCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="RvB-Qc-NAv"/>
                             <constraint firstItem="92i-Vg-z0G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="T3a-p8-6uA"/>
                             <constraint firstItem="x78-dc-WZH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="UTN-ra-ScI"/>
+                            <constraint firstItem="AMS-lX-cgg" firstAttribute="top" secondItem="vli-IF-lnU" secondAttribute="bottom" constant="30" id="Udc-Ft-h0f"/>
                             <constraint firstItem="JNx-tR-qgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="b64-AO-n6w"/>
                             <constraint firstAttribute="trailing" secondItem="3Fm-MC-FrT" secondAttribute="trailing" constant="40" id="etQ-wv-iP2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="63k-Ly-xTV" secondAttribute="trailing" constant="15" id="fU9-1R-sVD"/>
                             <constraint firstItem="63k-Ly-xTV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="hyr-P3-gol"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Pr-jg-FCv" secondAttribute="trailing" constant="15" id="jBb-Le-KMM"/>
-                            <constraint firstItem="vli-IF-lnU" firstAttribute="top" secondItem="Xti-ys-RA5" secondAttribute="bottom" constant="32" id="jNL-bq-imr"/>
+                            <constraint firstItem="vli-IF-lnU" firstAttribute="top" secondItem="Xti-ys-RA5" secondAttribute="bottom" constant="30" id="jNL-bq-imr"/>
+                            <constraint firstItem="AMS-lX-cgg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jfS-vh-StQ"/>
                             <constraint firstItem="92i-Vg-z0G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jis-M6-xeT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JNx-tR-qgh" secondAttribute="trailing" constant="40" id="l2D-tK-ri9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x78-dc-WZH" secondAttribute="trailing" constant="40" id="leZ-vi-dUb"/>
@@ -258,6 +293,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="back" id="icZ-DB-cFL"/>
                     <connections>
+                        <outlet property="ageDownButton" destination="lpf-Gb-ZyO" id="HPk-8r-FBx"/>
+                        <outlet property="ageLabel" destination="ZhX-Ui-Apo" id="mnP-8n-e2v"/>
+                        <outlet property="ageUpButton" destination="HR1-J1-Vn2" id="9Kl-04-SKL"/>
                         <outlet property="fullNameField" destination="JNx-tR-qgh" id="5Oe-C6-DtZ"/>
                         <outlet property="idcButton" destination="E5M-Jo-GkR" id="yqr-sd-1Na"/>
                         <outlet property="phoneNumberField" destination="x78-dc-WZH" id="gGY-v8-c3y"/>
@@ -271,10 +309,10 @@
             </objects>
             <point key="canvasLocation" x="-236.23188405797103" y="105.80357142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="ybP-9K-ten">
             <objects>
-                <viewController id="hMS-0O-5ct" sceneMemberID="viewController">
+                <viewController id="hMS-0O-5ct" customClass="createAccountViewController" customModule="PenPals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Tp-jp-Y6F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,41 +394,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="X15-tM-wXJ">
-                                <rect key="frame" x="22" y="163" width="370" height="102"/>
+                                <rect key="frame" x="22" y="163" width="370" height="31"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AMS-lX-cgg">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="31"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpf-Gb-ZyO">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="31"/>
-                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="minus.square" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="ageDownButton:" destination="e96-G0-46f" eventType="touchUpInside" id="ohk-6c-6lb"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhX-Ui-Apo">
-                                                <rect key="frame" x="123.5" y="0.0" width="123" height="31"/>
-                                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR1-J1-Vn2">
-                                                <rect key="frame" x="246.5" y="0.0" width="123.5" height="31"/>
-                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="plus.square" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="ageUpButton:" destination="e96-G0-46f" eventType="touchUpInside" id="v9E-2k-YcP"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fj8-8h-EI5">
-                                        <rect key="frame" x="0.0" y="71" width="370" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="32"/>
                                         <segments>
                                             <segment title="Female"/>
                                             <segment title="Male"/>
