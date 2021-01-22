@@ -17,12 +17,12 @@ class InitialViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //Check whether or not the app is already set up
-        if defaults.bool(forKey: "isSetup") {
+       // if defaults.bool(forKey: "isSetup") {
             //send the user to the main screen when it is set up.
-            //performSegue(withIdentifier: "mainSegue", sender: self)
-        } else {
+            performSegue(withIdentifier: "homeSegue", sender: self)
+       // } else {
             performSegue(withIdentifier: "setupSegue", sender: self)
-        }
+       // }
     }
     
 

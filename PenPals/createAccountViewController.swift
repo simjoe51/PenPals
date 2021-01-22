@@ -33,8 +33,18 @@ class createAccountViewController: UIViewController {
     func createDissimilarAccount() {
         //make sure this matches the address of the server in testing. Need to change to an outward facing address later on
         print("Creating dissimilar account now")
-        AF.request("http://192.168.1.7:8080/createaccount", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age)], encoder: JSONParameterEncoder.default).response { response in
+        AF.request("http://192.168.1.7:8080/createaccount", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age)], encoder: JSONParameterEncoder.default).response { [self] response in
             print("Reached server. Returned reponse: ", String(data: response.data!, encoding: String.Encoding.utf8)!)
+            //MARK: Add a selection statement to check whether or not the response was an error. If not, continue to the home screen
+            defaults.set(fullName, forKey: "fullName")
+            defaults.set(phoneNumber, forKey: "phoneNumber")
+            defaults.set(age, forKey: "age")
+            defaults.set(response, forKey: "UUID")
+            defaults.set(true, forKey: "isSetup")
+            
+            //MARK: Create CKRecord with UUID to sign in
+            
+            performSegue(withIdentifier: "setupToMain", sender: self)
         }
     }
     
@@ -42,16 +52,4 @@ class createAccountViewController: UIViewController {
     func createMatchedAccount() {
         //nothing here yet :(
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

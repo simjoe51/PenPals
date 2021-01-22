@@ -21,6 +21,7 @@
                     </view>
                     <connections>
                         <segue destination="fLM-5z-mhh" kind="presentation" identifier="setupSegue" animates="NO" modalPresentationStyle="fullScreen" id="10W-hj-h9o"/>
+                        <segue destination="owQ-tb-3fM" kind="presentation" identifier="homeSegue" animates="NO" modalPresentationStyle="fullScreen" id="hrK-wq-cxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6m-Eg-WpO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -365,10 +366,85 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jMH-Do-tPe"/>
+                    <connections>
+                        <segue destination="owQ-tb-3fM" kind="presentation" identifier="setupToMain" modalPresentationStyle="fullScreen" id="Ufg-iQ-d1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfw-VX-8nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-236.23188405797103" y="780.80357142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sNC-gb-omp">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="owQ-tb-3fM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eNr-8H-bUd"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCO-14-MjW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ymq-eS-y7f" kind="relationship" relationship="rootViewController" id="7cq-KM-KoX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUC-sd-4hJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="1457"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="je3-ZS-sn6">
+            <objects>
+                <viewController id="ymq-eS-y7f" customClass="HomeViewController" customModule="PenPals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rrw-b3-B8K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-NG-dgQ">
+                                <rect key="frame" x="20" y="69" width="374" height="100"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="i6A-bT-pXY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Afternoon, Joseph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d8-Q6-Iab">
+                                <rect key="frame" x="45" y="89" width="251" height="19"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no new mail :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-hF-mNx">
+                                <rect key="frame" x="45" y="123" width="221" height="16"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
+                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OT0-dx-O3e"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RvK-hF-mNx" firstAttribute="top" secondItem="7d8-Q6-Iab" secondAttribute="bottom" constant="15" id="MJp-u1-td4"/>
+                            <constraint firstItem="TEO-NG-dgQ" firstAttribute="top" secondItem="OT0-dx-O3e" secondAttribute="top" constant="25" id="MoE-Ld-b1Q"/>
+                            <constraint firstItem="OT0-dx-O3e" firstAttribute="trailing" secondItem="TEO-NG-dgQ" secondAttribute="trailing" constant="20" id="YQS-qo-Clw"/>
+                            <constraint firstItem="TEO-NG-dgQ" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="20" id="YWZ-0d-yKP"/>
+                            <constraint firstItem="7d8-Q6-Iab" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="45" id="m2H-9v-a46"/>
+                            <constraint firstItem="7d8-Q6-Iab" firstAttribute="top" secondItem="OT0-dx-O3e" secondAttribute="top" constant="45" id="sOg-ge-TOx"/>
+                            <constraint firstItem="RvK-hF-mNx" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="45" id="wZ7-Oy-Xwe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zHd-om-L02"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="7d8-Q6-Iab" id="6WP-kv-BaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biN-xD-hwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="1456"/>
         </scene>
         <!--More Onboarding View Controller-->
         <scene sceneID="ayP-8J-lUp">
@@ -435,6 +511,9 @@
             <point key="canvasLocation" x="779.71014492753625" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ufg-iQ-d1u"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="hand.raised.slash" catalog="system" width="128" height="128"/>
         <image name="minus.square" catalog="system" width="128" height="114"/>
