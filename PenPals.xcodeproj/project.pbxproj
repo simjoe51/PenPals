@@ -21,6 +21,7 @@
 		CABCEFE325AA2C56000FD38A /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCEFE225AA2C56000FD38A /* PrivacyViewController.swift */; };
 		CABCEFE825AA2F6E000FD38A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCEFE725AA2F6E000FD38A /* InitialViewController.swift */; };
 		CABCEFED25AAB590000FD38A /* MoreOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCEFEC25AAB590000FD38A /* MoreOnboardingViewController.swift */; };
+		CAC08F3F25BA8B0B00638820 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC08F3E25BA8B0B00638820 /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		CABCEFE225AA2C56000FD38A /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		CABCEFE725AA2F6E000FD38A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CABCEFEC25AAB590000FD38A /* MoreOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOnboardingViewController.swift; sourceTree = "<group>"; };
+		CAC08F3E25BA8B0B00638820 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				CA48C7E0254C6E1600669BEA /* SceneDelegate.swift */,
 				CA48C7E4254C6E1600669BEA /* Main.storyboard */,
 				CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */,
+				CAC08F3E25BA8B0B00638820 /* ComposeViewController.swift */,
 				CA7CA89625ACC50600658F73 /* createAccountViewController.swift */,
 				CABCEFE725AA2F6E000FD38A /* InitialViewController.swift */,
 				CABCEFE225AA2C56000FD38A /* PrivacyViewController.swift */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC08F3F25BA8B0B00638820 /* ComposeViewController.swift in Sources */,
 				CA7CA89725ACC50600658F73 /* createAccountViewController.swift in Sources */,
 				CABCEFED25AAB590000FD38A /* MoreOnboardingViewController.swift in Sources */,
 				CABCEFE825AA2F6E000FD38A /* InitialViewController.swift in Sources */,

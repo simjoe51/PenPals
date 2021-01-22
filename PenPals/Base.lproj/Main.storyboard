@@ -401,10 +401,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-NG-dgQ">
-                                <rect key="frame" x="20" y="69" width="374" height="100"/>
+                                <rect key="frame" x="20" y="69" width="374" height="85"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="i6A-bT-pXY"/>
+                                    <constraint firstAttribute="height" constant="85" id="i6A-bT-pXY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -413,25 +413,43 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Afternoon, Joseph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d8-Q6-Iab">
-                                <rect key="frame" x="45" y="89" width="251" height="19"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
+                                <rect key="frame" x="45" y="89" width="264.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no new mail :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-hF-mNx">
-                                <rect key="frame" x="45" y="123" width="221" height="16"/>
+                                <rect key="frame" x="45" y="119" width="221" height="16"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
                                 <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht8-SS-gBa">
+                                <rect key="frame" x="344.5" y="97" width="29.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="square.and.pencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="medium"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="composeButton:" destination="ymq-eS-y7f" eventType="touchUpInside" id="AMb-1v-gXq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OT0-dx-O3e"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RvK-hF-mNx" firstAttribute="top" secondItem="7d8-Q6-Iab" secondAttribute="bottom" constant="15" id="MJp-u1-td4"/>
+                            <constraint firstItem="RvK-hF-mNx" firstAttribute="top" secondItem="7d8-Q6-Iab" secondAttribute="bottom" constant="10" id="MJp-u1-td4"/>
                             <constraint firstItem="TEO-NG-dgQ" firstAttribute="top" secondItem="OT0-dx-O3e" secondAttribute="top" constant="25" id="MoE-Ld-b1Q"/>
+                            <constraint firstItem="ht8-SS-gBa" firstAttribute="centerY" secondItem="TEO-NG-dgQ" secondAttribute="centerY" id="PGZ-LK-DvL"/>
                             <constraint firstItem="OT0-dx-O3e" firstAttribute="trailing" secondItem="TEO-NG-dgQ" secondAttribute="trailing" constant="20" id="YQS-qo-Clw"/>
                             <constraint firstItem="TEO-NG-dgQ" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="20" id="YWZ-0d-yKP"/>
+                            <constraint firstItem="OT0-dx-O3e" firstAttribute="trailing" secondItem="ht8-SS-gBa" secondAttribute="trailing" constant="40" id="b9m-vR-CNH"/>
                             <constraint firstItem="7d8-Q6-Iab" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="45" id="m2H-9v-a46"/>
                             <constraint firstItem="7d8-Q6-Iab" firstAttribute="top" secondItem="OT0-dx-O3e" secondAttribute="top" constant="45" id="sOg-ge-TOx"/>
                             <constraint firstItem="RvK-hF-mNx" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="45" id="wZ7-Oy-Xwe"/>
@@ -440,11 +458,136 @@
                     <navigationItem key="navigationItem" id="zHd-om-L02"/>
                     <connections>
                         <outlet property="greetingLabel" destination="7d8-Q6-Iab" id="6WP-kv-BaE"/>
+                        <segue destination="3XL-kT-Mci" kind="show" identifier="composeSegue" id="H5D-d4-l2H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biN-xD-hwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616" y="1456"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="Y1m-Ow-eB6">
+            <objects>
+                <viewController id="3XL-kT-Mci" customClass="ComposeViewController" customModule="PenPals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="plJ-bt-ijR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-W6-yvM">
+                                <rect key="frame" x="20" y="64" width="374" height="698"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m7q-wV-j2w">
+                                        <rect key="frame" x="20" y="80" width="334" height="588"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Tap here to get writing. If you need some help getting started or want to be extra-super fancy, check out the information menu on your homepage for letter writing tips. Be nice :)</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="light"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N20-zT-uzH">
+                                        <rect key="frame" x="20" y="26" width="109.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="26"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERz-Fr-ssT">
+                                        <rect key="frame" x="284" y="18" width="70" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvm-C1-tjP">
+                                                <rect key="frame" x="12" y="4.5" width="46" height="31"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="3XL-kT-Mci" eventType="touchUpInside" id="4lt-hH-UDI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Jvm-C1-tjP" firstAttribute="centerY" secondItem="ERz-Fr-ssT" secondAttribute="centerY" id="6Ga-yL-QYd"/>
+                                            <constraint firstAttribute="height" constant="40" id="UVh-Ce-sU6"/>
+                                            <constraint firstAttribute="width" constant="70" id="ZYP-KI-pvn"/>
+                                            <constraint firstItem="Jvm-C1-tjP" firstAttribute="centerX" secondItem="ERz-Fr-ssT" secondAttribute="centerX" id="uBQ-E6-06k"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ERz-Fr-ssT" secondAttribute="trailing" constant="20" id="74Z-ub-jx7"/>
+                                    <constraint firstItem="m7q-wV-j2w" firstAttribute="leading" secondItem="0mh-W6-yvM" secondAttribute="leading" constant="20" id="ClR-aK-VLt"/>
+                                    <constraint firstItem="m7q-wV-j2w" firstAttribute="top" secondItem="0mh-W6-yvM" secondAttribute="top" constant="80" id="HeU-Gh-rUd"/>
+                                    <constraint firstItem="N20-zT-uzH" firstAttribute="top" secondItem="0mh-W6-yvM" secondAttribute="top" constant="26" id="L4G-vs-NAM"/>
+                                    <constraint firstItem="ERz-Fr-ssT" firstAttribute="top" secondItem="0mh-W6-yvM" secondAttribute="top" constant="18" id="Vjk-yx-Rla"/>
+                                    <constraint firstAttribute="trailing" secondItem="m7q-wV-j2w" secondAttribute="trailing" constant="20" id="ozR-ZO-ch1"/>
+                                    <constraint firstItem="N20-zT-uzH" firstAttribute="leading" secondItem="0mh-W6-yvM" secondAttribute="leading" constant="20" id="po0-Re-7wy"/>
+                                    <constraint firstItem="m7q-wV-j2w" firstAttribute="bottom" secondItem="0mh-W6-yvM" secondAttribute="bottom" constant="-30" id="uJF-qo-oZu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BHq-PJ-UkE">
+                                <rect key="frame" x="20" y="782" width="374" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeQ-rt-3Vb">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="80"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="22"/>
+                                        <state key="normal" title="save">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zN-gp-3K9">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="80"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="22"/>
+                                        <state key="normal" title="send">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="exW-NU-mWH"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0mh-W6-yvM" firstAttribute="top" secondItem="exW-NU-mWH" secondAttribute="top" constant="20" id="0Tb-Q5-PjT"/>
+                            <constraint firstItem="exW-NU-mWH" firstAttribute="bottom" secondItem="0mh-W6-yvM" secondAttribute="bottom" constant="100" id="8Bg-z2-reL"/>
+                            <constraint firstItem="exW-NU-mWH" firstAttribute="bottom" secondItem="BHq-PJ-UkE" secondAttribute="bottom" id="CA1-WU-4O9"/>
+                            <constraint firstItem="BHq-PJ-UkE" firstAttribute="leading" secondItem="exW-NU-mWH" secondAttribute="leading" constant="20" id="Jul-YS-wzt"/>
+                            <constraint firstItem="exW-NU-mWH" firstAttribute="trailing" secondItem="0mh-W6-yvM" secondAttribute="trailing" constant="20" id="Xtw-jb-mRC"/>
+                            <constraint firstItem="exW-NU-mWH" firstAttribute="trailing" secondItem="BHq-PJ-UkE" secondAttribute="trailing" constant="20" id="hi2-8U-ePg"/>
+                            <constraint firstItem="0mh-W6-yvM" firstAttribute="leading" secondItem="exW-NU-mWH" secondAttribute="leading" constant="20" id="plr-mZ-DAQ"/>
+                            <constraint firstItem="BHq-PJ-UkE" firstAttribute="top" secondItem="0mh-W6-yvM" secondAttribute="bottom" constant="20" id="xyC-3K-pvA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uRl-Tx-RjY"/>
+                    <connections>
+                        <outlet property="editingField" destination="m7q-wV-j2w" id="4KY-hO-V50"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwC-xB-Z4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379.7101449275362" y="1455.8035714285713"/>
         </scene>
         <!--More Onboarding View Controller-->
         <scene sceneID="ayP-8J-lUp">
@@ -519,6 +662,7 @@
         <image name="minus.square" catalog="system" width="128" height="114"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

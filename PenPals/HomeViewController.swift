@@ -27,11 +27,13 @@ class HomeViewController: UIViewController {
         } else if hour >= 20 && hour <= 24 {
             greetingLabel.text = "Good Night, \(String(describing: defaults.string(forKey: "fullName")?.components(separatedBy: " ").first))"
         }
-
-        // Do any additional setup after loading the view.
     }
     
-
+    //When compose button pressed, send the user to the new view controller
+    @IBAction func composeButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "composeSegue", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

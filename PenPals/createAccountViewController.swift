@@ -8,6 +8,7 @@
 import UIKit
 import CloudKit
 import Alamofire
+import CryptoKit
 
 class createAccountViewController: UIViewController {
 
@@ -31,6 +32,13 @@ class createAccountViewController: UIViewController {
     }
     
     func createDissimilarAccount() {
+        
+        //MARK: Create Private/Public Keypair
+        let privateKey = Curve25519.KeyAgreement.PrivateKey()
+        let publicKey = privateKey.publicKey
+        defaults.set(privateKey, forKey: "private") //make sure this is secure as it's pretty important...
+        defaults.set(publicKey, forKey: "public")
+        
         //make sure this matches the address of the server in testing. Need to change to an outward facing address later on
         print("Creating dissimilar account now")
         AF.request("http://192.168.1.7:8080/createaccount", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age)], encoder: JSONParameterEncoder.default).response { [self] response in
