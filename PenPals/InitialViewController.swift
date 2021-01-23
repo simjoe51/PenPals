@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class InitialViewController: UIViewController {
 
@@ -17,12 +18,49 @@ class InitialViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //Check whether or not the app is already set up
-       // if defaults.bool(forKey: "isSetup") {
-            //send the user to the main screen when it is set up.
-            performSegue(withIdentifier: "homeSegue", sender: self)
-       // } else {
+        if defaults.bool(forKey: "isSetup") {
+            //Check for an alert and then send the user to their homepage
+            checkForAlert()
+        } else {
+        //send the user to setup
             performSegue(withIdentifier: "setupSegue", sender: self)
-       // }
+        }
+    }
+    
+    func checkForAlert() {
+        //Check for an alert. If one exists, display it.
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: "alert", predicate: predicate)
+        
+        let operation = CKQueryOperation(query: query)
+        operation.desiredKeys = ["title", "body"]
+        operation.resultsLimit = 1
+        operation.qualityOfService = .userInitiated
+        operation.queuePriority = .veryHigh
+        
+        operation.recordFetchedBlock = { record in
+            print(record)
+            let ac = UIAlertController(title: record["title"], message: record["body"], preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(ac, animated: true)
+        }
+        
+        operation.queryCompletionBlock = { (cursor, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    //if no error, send the user home
+                    self.performSegue(withIdentifier: "homeSegue", sender: self)
+                } else {
+                    let ac = UIAlertController(title: "Hmmm...", message: "There seems to be an issue connecting to one of my cloud services: \(error!.localizedDescription)", preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "Ok", style: .default))
+                    self.present(ac, animated: true)
+                    
+                    self.performSegue(withIdentifier: "homeSegue", sender: self)
+                }
+            }
+        }
+        
+        CKContainer.default().publicCloudDatabase.add(operation)
     }
     
 

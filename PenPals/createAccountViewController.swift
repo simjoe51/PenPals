@@ -36,18 +36,19 @@ class createAccountViewController: UIViewController {
         //MARK: Create Private/Public Keypair
         let privateKey = Curve25519.KeyAgreement.PrivateKey()
         let publicKey = privateKey.publicKey
-        defaults.set(privateKey, forKey: "private") //make sure this is secure as it's pretty important...
-        defaults.set(publicKey, forKey: "public")
+        defaults.set(privateKey.rawRepresentation, forKey: "private") //make sure this is secure as it's pretty important...
+        defaults.set(publicKey.rawRepresentation, forKey: "public")
         
         //make sure this matches the address of the server in testing. Need to change to an outward facing address later on
         print("Creating dissimilar account now")
-        AF.request("http://192.168.1.7:8080/createaccount", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age), "publicKey": String(publicKey.rawRepresentation)], encoder: JSONParameterEncoder.default).response { [self] response in
+        AF.request("http://192.168.1.7:8080/createaccount", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age), "publicKey": publicKey.rawRepresentation.base64EncodedString()], encoder: JSONParameterEncoder.default).response { [self] response in
             print("Reached server. Returned reponse: ", String(data: response.data!, encoding: String.Encoding.utf8)!)
             //MARK: Add a selection statement to check whether or not the response was an error. If not, continue to the home screen
             defaults.set(fullName, forKey: "fullName")
             defaults.set(phoneNumber, forKey: "phoneNumber")
             defaults.set(age, forKey: "age")
-            defaults.set(response, forKey: "UUID")
+            defaults.set(response.data, forKey: "UUID")
+            print(defaults.data(forKey: "UUID")?.base64EncodedString())
             defaults.set(true, forKey: "isSetup")
             
             //MARK: Create CKRecord with UUID to sign in
