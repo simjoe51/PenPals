@@ -16,6 +16,7 @@
 		CA48C801254C6E1A00669BEA /* PenPalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48C800254C6E1A00669BEA /* PenPalsUITests.swift */; };
 		CA7CA89725ACC50600658F73 /* createAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7CA89625ACC50600658F73 /* createAccountViewController.swift */; };
 		CA8F2B6E25B9E7EE00FF471D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */; };
+		CAB03D6E25D0977B00CEFCFA /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB03D6D25D0977B00CEFCFA /* Letter.swift */; };
 		CABCEFCC25A95C51000FD38A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CABCEFCB25A95C51000FD38A /* Alamofire */; };
 		CABCEFD425A95CB8000FD38A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCEFD325A95CB8000FD38A /* OnboardingViewController.swift */; };
 		CABCEFE325AA2C56000FD38A /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCEFE225AA2C56000FD38A /* PrivacyViewController.swift */; };
@@ -58,6 +59,7 @@
 		CA48C802254C6E1A00669BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA7CA89625ACC50600658F73 /* createAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createAccountViewController.swift; sourceTree = "<group>"; };
 		CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CAB03D6D25D0977B00CEFCFA /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		CABCEFD325A95CB8000FD38A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CABCEFE225AA2C56000FD38A /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		CABCEFE725AA2F6E000FD38A /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				CABF00B525BBCE0700705E76 /* PenPals.entitlements */,
 				CA48C7DE254C6E1600669BEA /* AppDelegate.swift */,
+				CAB03D6D25D0977B00CEFCFA /* Letter.swift */,
 				CA48C7E0254C6E1600669BEA /* SceneDelegate.swift */,
 				CA48C7E4254C6E1600669BEA /* Main.storyboard */,
 				CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */,
@@ -305,6 +308,7 @@
 				CA8F2B6E25B9E7EE00FF471D /* HomeViewController.swift in Sources */,
 				CA48C7DF254C6E1600669BEA /* AppDelegate.swift in Sources */,
 				CABCEFD425A95CB8000FD38A /* OnboardingViewController.swift in Sources */,
+				CAB03D6E25D0977B00CEFCFA /* Letter.swift in Sources */,
 				CA48C7E1254C6E1600669BEA /* SceneDelegate.swift in Sources */,
 				CABCEFE325AA2C56000FD38A /* PrivacyViewController.swift in Sources */,
 			);

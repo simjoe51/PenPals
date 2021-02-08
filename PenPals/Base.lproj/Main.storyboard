@@ -563,6 +563,9 @@
                                                 <integer key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendLetter:" destination="3XL-kT-Mci" eventType="touchUpInside" id="HKv-7Z-nVf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

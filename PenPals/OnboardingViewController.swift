@@ -136,7 +136,7 @@ class OnboardingViewController: UIViewController, UITextFieldDelegate {
         age += 1
         ageLabel.text = "Age: \(String(age))"
         ageDownButton.isEnabled = true
-        if age == 17 {
+        if age == 99 {
             ageUpButton.isEnabled = false
         }
     }

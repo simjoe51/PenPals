@@ -25,6 +25,10 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         editingField.resignFirstResponder()
     }
     
+    @IBAction func sendLetter(_ sender: UIButton) {
+        //let recipientPublicKey = Curve25519.KeyAgreement.PublicKey(rawRepresentation: <#T##ContiguousBytes#>)
+    }
+    
     /*
     // MARK: - Navigation
 
