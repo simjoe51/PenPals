@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     //MARK:Check For New Letters
     func checkForLetters() {
         print("Checking for new letters...")
-        AF.request("http://192.168.1.7:8080/getnew", method: .post, parameters: ["forUUID": defaults.data(forKey: "UUID")], encoder: JSONParameterEncoder.default).response { response in
+        AF.request("\(addressVariable)getnew", method: .post, parameters: ["forUUID": defaults.data(forKey: "UUID")], encoder: JSONParameterEncoder.default).response { response in
             
         }
     }
@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
     //MARK: Check for PenPal
     func checkPartner() {
         print("Checking for new assigned partners")
-        AF.request("http://192.168.1.7:8080/checkPartner", method: .post, parameters: ["forUUID": defaults.data(forKey: "UUID")], encoder: JSONParameterEncoder.default).response { response in
+        AF.request("\(addressVariable)checkpartner", method: .post, parameters: ["forUUID": defaults.data(forKey: "UUID")], encoder: JSONParameterEncoder.default).response { response in
             
         }
     }

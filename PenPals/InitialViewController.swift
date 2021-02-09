@@ -8,6 +8,9 @@
 import UIKit
 import CloudKit
 
+//MARK: Address for Alamofire
+let addressVariable = "http://192.168.1.14:8080/"
+
 class InitialViewController: UIViewController {
 
     override func viewDidLoad() {

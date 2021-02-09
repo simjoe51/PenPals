@@ -13,12 +13,15 @@ struct Letter: Codable {
     let sender: String
     let recipient: String
     
+    /*
+    
     @discardableResult
     static func letterFromNotification(_ notification: [String: AnyObject]) -> Letter? {
         guard
-            let data = notification[]
+            //let data = notification[]
     }
     
+ */
     init(data: String, sender: String, recipient: String) {
         self.data = data
         self.recipient = recipient
