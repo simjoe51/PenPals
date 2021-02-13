@@ -14,6 +14,7 @@
 		CA48C7EB254C6E1900669BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA48C7E9254C6E1900669BEA /* LaunchScreen.storyboard */; };
 		CA48C7F6254C6E1A00669BEA /* PenPalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48C7F5254C6E1A00669BEA /* PenPalsTests.swift */; };
 		CA48C801254C6E1A00669BEA /* PenPalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48C800254C6E1A00669BEA /* PenPalsUITests.swift */; };
+		CA707FF025D2FFFA000C03C7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA707FEE25D2FFFA000C03C7 /* Model.xcdatamodeld */; };
 		CA7CA89725ACC50600658F73 /* createAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7CA89625ACC50600658F73 /* createAccountViewController.swift */; };
 		CA8F2B6E25B9E7EE00FF471D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */; };
 		CAB03D6E25D0977B00CEFCFA /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB03D6D25D0977B00CEFCFA /* Letter.swift */; };
@@ -57,6 +58,7 @@
 		CA48C7FC254C6E1A00669BEA /* PenPalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenPalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA48C800254C6E1A00669BEA /* PenPalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenPalsUITests.swift; sourceTree = "<group>"; };
 		CA48C802254C6E1A00669BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA707FEF25D2FFFA000C03C7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CA7CA89625ACC50600658F73 /* createAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createAccountViewController.swift; sourceTree = "<group>"; };
 		CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CAB03D6D25D0977B00CEFCFA /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				CA48C7E7254C6E1900669BEA /* Assets.xcassets */,
 				CA48C7E9254C6E1900669BEA /* LaunchScreen.storyboard */,
 				CA48C7EC254C6E1900669BEA /* Info.plist */,
+				CA707FEE25D2FFFA000C03C7 /* Model.xcdatamodeld */,
 			);
 			path = PenPals;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				CABCEFD425A95CB8000FD38A /* OnboardingViewController.swift in Sources */,
 				CAB03D6E25D0977B00CEFCFA /* Letter.swift in Sources */,
 				CA48C7E1254C6E1600669BEA /* SceneDelegate.swift in Sources */,
+				CA707FF025D2FFFA000C03C7 /* Model.xcdatamodeld in Sources */,
 				CABCEFE325AA2C56000FD38A /* PrivacyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,6 +670,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CA707FEE25D2FFFA000C03C7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA707FEF25D2FFFA000C03C7 /* Model.xcdatamodel */,
+			);
+			currentVersion = CA707FEF25D2FFFA000C03C7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CA48C7D3254C6E1600669BEA /* Project object */;
 }

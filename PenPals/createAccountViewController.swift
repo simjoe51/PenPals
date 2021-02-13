@@ -41,6 +41,7 @@ class createAccountViewController: UIViewController {
         
         print("Creating dissimilar account now")
         //check whether or not the user has consented to notifications
+        //MARK: Notifs?
         if defaults.bool(forKey: "notifications") {
             //MARK: Create account with notification preferences
             //make sure to add a method when the user changes preferences to selectively remove or add this column from a user's account file
