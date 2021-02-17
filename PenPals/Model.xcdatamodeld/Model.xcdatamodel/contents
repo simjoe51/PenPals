@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deviceToken" optional="YES" attributeType="String"/>
+        <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="partnerID" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="publicKey" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Letter" representedClassName="Letter" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="String"/>
         <attribute name="recipientID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="senderID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
+    <entity name="Partner" representedClassName="Partner" syncable="YES" codeGenerationType="class"/>
     <elements>
+        <element name="Account" positionX="-63" positionY="9" width="128" height="134"/>
         <element name="Letter" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Partner" positionX="-54" positionY="18" width="128" height="29"/>
     </elements>
 </model>

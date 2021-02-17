@@ -7,26 +7,52 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class HomeViewController: UIViewController {
     
     //MARK: Properties
     @IBOutlet weak var greetingLabel: UILabel!
     
+    //MARK: Variables
+    var nameString: String = ""
+    //debug
+    var idString: UUID = UUID(uuidString: "00000000-0000-0000-0000-000000000000")!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Account")
+        //fetchRequest.predicate = NSPredicate()
+        //MARK: Predicates?
+        do {
+           let accounts = try managedContext.fetch(fetchRequest)
+            nameString = accounts[0].value(forKeyPath: "fullName") as! String
+          //  idString = accounts[0].value(forKeyPath: "id") as! UUID
+            print(idString)
+        } catch let error as NSError {
+            print("Could not fetch :( \(error), \(error.userInfo)")
+        }
+        
+        
+        
         //Set the greeting label depending on time
         let hour = Calendar.current.component(.hour, from: Date())
+        let nameStringFormatted: String! = nameString.components(separatedBy: " ").first
         if hour >= 0 && hour < 12 {
-            greetingLabel.text = "Good Morning, \(String(describing: defaults.string(forKey: "fullName")?.components(separatedBy: " ").first))"
+            greetingLabel.text = "Good Night, \(nameStringFormatted ?? "Fetch failure")"
         } else if hour >= 12 && hour < 17 {
-            greetingLabel.text = "Good Afternoon, \(String(describing: defaults.string(forKey: "fullName")?.components(separatedBy: " ").first))"
+            greetingLabel.text = "Good Night, \(nameStringFormatted ?? "Fetch failure")"
         } else if hour >= 17 && hour < 20 {
-            greetingLabel.text = "Good Evening, \(String(describing: defaults.string(forKey: "fullName")?.components(separatedBy: " ").first))"
+            greetingLabel.text = "Good Night, \(nameStringFormatted ?? "Fetch failure")"
         } else if hour >= 20 && hour <= 24 {
-            greetingLabel.text = "Good Night, \(String(describing: defaults.string(forKey: "fullName")?.components(separatedBy: " ").first))"
+            greetingLabel.text = "Good Night, \(nameStringFormatted ?? "Fetch failure")"
         }
         
         //check for new letters when the app opens and every time this screen is returned to
@@ -51,7 +77,6 @@ class HomeViewController: UIViewController {
     func checkPartner() {
         print("Checking for new assigned partners")
         AF.request("\(addressVariable)checkpartner", method: .post, parameters: ["forUUID": defaults.data(forKey: "UUID")], encoder: JSONParameterEncoder.default).response { response in
-            
         }
     }
     

@@ -20,6 +20,7 @@ class InitialViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //MARK: Debug
         //Check whether or not the app is already set up
         if defaults.bool(forKey: "isSetup") {
             //Check for an alert and then send the user to their homepage

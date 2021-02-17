@@ -9,6 +9,7 @@ import UIKit
 import CloudKit
 import Alamofire
 import CryptoKit
+import CoreData
 
 class createAccountViewController: UIViewController {
 
@@ -43,22 +44,46 @@ class createAccountViewController: UIViewController {
         //check whether or not the user has consented to notifications
         //MARK: Notifs?
         if defaults.bool(forKey: "notifications") {
+            print("NOTIFICATIONS ENABLED")
             //MARK: Create account with notification preferences
             //make sure to add a method when the user changes preferences to selectively remove or add this column from a user's account file
-            AF.request("\(addressVariable)createaccountnotifs", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age), "publicKey": publicKey.rawRepresentation.base64EncodedString()], encoder: JSONParameterEncoder.default).response { [self] response in
+            AF.request("http://192.168.1.14:8080/createaccountnotifs", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age), "publicKey": publicKey.rawRepresentation.base64EncodedString(), "deviceToken": defaults.string(forKey: "token")], encoder: JSONParameterEncoder.default).response { [self] response in
                 
                 if response.data == nil {
                     print("Request to vapor returned nil unexpectedly. Internet error?")
                     //MARK: ADD alert here
                 } else {
                     print("Reached server. Returned reponse: ", String(data: response.data!, encoding: String.Encoding.utf8)!)
+                    
+                    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                        return
+                    }
+                    let managedContext = appDelegate.persistentContainer.viewContext
+                    let entity = NSEntityDescription.entity(forEntityName: "Account", in: managedContext)
+                    let account = NSManagedObject(entity: entity!, insertInto: managedContext)
+                    
                     //MARK: Add a selection statement to check whether or not the response was an error. If not, continue to the home screen
+                    //create codable struct to decode UUID from response
+                    struct ID: Codable {
+                        let id: UUID
+                        
+                        func getID() -> UUID {
+                            return id
+                        }
+                    }
                     //set persistent values for profile data for use later
-                    defaults.set(fullName, forKey: "fullName")
-                    defaults.set(phoneNumber, forKey: "phoneNumber")
-                    defaults.set(age, forKey: "age")
+                    account.setValue(fullName, forKeyPath: "fullName")
+                    account.setValue(phoneNumber, forKeyPath: "phoneNumber")
+                    account.setValue(age, forKeyPath: "age")
+                    account.setValue(UUID(uuidString: String(data: response.data!, encoding: .utf8)!), forKeyPath: "id")
                     defaults.set(response.data, forKey: "UUID")
                     defaults.set(true, forKey: "isSetup")
+                    
+                    do {
+                        try managedContext.save()
+                    } catch let error as NSError {
+                        print("Could not save. \(error), \(error.userInfo)")
+                    }
                     
                     //MARK: Create CKRecord with UUID to sign in
                     
@@ -67,6 +92,7 @@ class createAccountViewController: UIViewController {
             }
 
         } else {
+            //MARK: Create account without notification privileges
             AF.request("\(addressVariable)createaccount", method: .post, parameters: ["fullName": fullName, "phoneNumber": phoneNumber, "age": String(age), "publicKey": publicKey.rawRepresentation.base64EncodedString()], encoder: JSONParameterEncoder.default).response { [self] response in
                 
                 if response.data == nil {
@@ -76,11 +102,25 @@ class createAccountViewController: UIViewController {
                     print("Reached server. Returned reponse: ", String(data: response.data!, encoding: String.Encoding.utf8)!)
                     //MARK: Add a selection statement to check whether or not the response was an error. If not, continue to the home screen
                     //set persistent values for profile data for use later
-                    defaults.set(fullName, forKey: "fullName")
-                    defaults.set(phoneNumber, forKey: "phoneNumber")
-                    defaults.set(age, forKey: "age")
+                    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                        return
+                    }
+                    let managedContext = appDelegate.persistentContainer.viewContext
+                    let entity = NSEntityDescription.entity(forEntityName: "Account", in: managedContext)
+                    let person = NSManagedObject(entity: entity!, insertInto: managedContext)
+                    
+                    person.setValue(fullName, forKeyPath: "fullName")
+                    person.setValue(phoneNumber, forKeyPath: "phoneNumber")
+                    person.setValue(age, forKeyPath: "age")
+                    person.setValue(UUID(uuidString: String(data: response.data!, encoding: .utf8)!), forKeyPath: "id")
                     defaults.set(response.data, forKey: "UUID")
                     defaults.set(true, forKey: "isSetup")
+                    
+                    do {
+                        try managedContext.save()
+                    } catch let error as NSError {
+                        print("Could not save. \(error), \(error.userInfo)")
+                    }
                     
                     //MARK: Create CKRecord with UUID to sign in
                     
