@@ -57,7 +57,18 @@ class HomeViewController: UIViewController {
         
         //check for new letters when the app opens and every time this screen is returned to
         
+        //set presentation context for submenu
+        definesPresentationContext = true
+        
     }
+   
+    
+    //Up arrow to show settings and about menu
+    @IBAction func menuDisclosure(_ sender: UIButton) {
+        performSegue(withIdentifier: "disclosureSegue", sender: self)
+        print("loaded menu frame")
+    }
+    
     
     //When compose button pressed, send the user to the new view controller
     @IBAction func composeButton(_ sender: UIButton) {

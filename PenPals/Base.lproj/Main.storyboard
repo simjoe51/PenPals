@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wcc-iD-hgK">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +15,21 @@
                     <view key="view" contentMode="scaleToFill" id="3o2-se-UB3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scryptdLogo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-pM-hAz">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7pk-OJ-UfN"/>
+                                    <constraint firstAttribute="height" constant="300" id="T1g-fa-EHb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Oxd-5M-uvK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t6K-pM-hAz" firstAttribute="centerY" secondItem="3o2-se-UB3" secondAttribute="centerY" id="Z4a-Yd-AI6"/>
+                            <constraint firstItem="t6K-pM-hAz" firstAttribute="centerX" secondItem="3o2-se-UB3" secondAttribute="centerX" id="clv-9r-ECC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="fLM-5z-mhh" kind="presentation" identifier="setupSegue" animates="NO" modalPresentationStyle="fullScreen" id="10W-hj-h9o"/>
@@ -440,16 +452,31 @@
                                     <action selector="composeButton:" destination="ymq-eS-y7f" eventType="touchUpInside" id="AMb-1v-gXq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gl-f0-ASS">
+                                <rect key="frame" x="182" y="840" width="50" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="h4C-f4-lIS"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.up" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuDisclosure:" destination="ymq-eS-y7f" eventType="touchUpInside" id="jiT-jP-uES"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OT0-dx-O3e"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2Gl-f0-ASS" firstAttribute="centerX" secondItem="rrw-b3-B8K" secondAttribute="centerX" id="H7b-ic-wfO"/>
                             <constraint firstItem="RvK-hF-mNx" firstAttribute="top" secondItem="7d8-Q6-Iab" secondAttribute="bottom" constant="10" id="MJp-u1-td4"/>
                             <constraint firstItem="TEO-NG-dgQ" firstAttribute="top" secondItem="OT0-dx-O3e" secondAttribute="top" constant="25" id="MoE-Ld-b1Q"/>
                             <constraint firstItem="ht8-SS-gBa" firstAttribute="centerY" secondItem="TEO-NG-dgQ" secondAttribute="centerY" id="PGZ-LK-DvL"/>
                             <constraint firstItem="OT0-dx-O3e" firstAttribute="trailing" secondItem="TEO-NG-dgQ" secondAttribute="trailing" constant="20" id="YQS-qo-Clw"/>
                             <constraint firstItem="TEO-NG-dgQ" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="20" id="YWZ-0d-yKP"/>
                             <constraint firstItem="OT0-dx-O3e" firstAttribute="trailing" secondItem="ht8-SS-gBa" secondAttribute="trailing" constant="40" id="b9m-vR-CNH"/>
+                            <constraint firstItem="OT0-dx-O3e" firstAttribute="bottom" secondItem="2Gl-f0-ASS" secondAttribute="bottom" id="bon-zz-0ac"/>
                             <constraint firstItem="7d8-Q6-Iab" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="45" id="m2H-9v-a46"/>
                             <constraint firstItem="7d8-Q6-Iab" firstAttribute="top" secondItem="OT0-dx-O3e" secondAttribute="top" constant="45" id="sOg-ge-TOx"/>
                             <constraint firstItem="RvK-hF-mNx" firstAttribute="leading" secondItem="OT0-dx-O3e" secondAttribute="leading" constant="45" id="wZ7-Oy-Xwe"/>
@@ -459,11 +486,38 @@
                     <connections>
                         <outlet property="greetingLabel" destination="7d8-Q6-Iab" id="6WP-kv-BaE"/>
                         <segue destination="3XL-kT-Mci" kind="show" identifier="composeSegue" id="H5D-d4-l2H"/>
+                        <segue destination="CyU-UL-vtc" kind="presentation" identifier="disclosureSegue" modalPresentationStyle="overCurrentContext" id="OMz-79-UNc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biN-xD-hwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616" y="1456"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5MB-rn-1UA">
+            <objects>
+                <viewController id="CyU-UL-vtc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SY7-qw-Ogv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nke-9b-u5Q">
+                                <rect key="frame" x="0.0" y="734" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BUd-2m-FPJ"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nke-9b-u5Q" firstAttribute="bottom" secondItem="SY7-qw-Ogv" secondAttribute="bottom" id="Am4-IO-lfu"/>
+                            <constraint firstItem="nke-9b-u5Q" firstAttribute="leading" secondItem="BUd-2m-FPJ" secondAttribute="leading" id="C2a-a7-2Rf"/>
+                            <constraint firstItem="BUd-2m-FPJ" firstAttribute="trailing" secondItem="nke-9b-u5Q" secondAttribute="trailing" id="Q2U-jn-e2R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKg-4o-W9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="2125"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="Y1m-Ow-eB6">
@@ -572,6 +626,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="exW-NU-mWH"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0mh-W6-yvM" firstAttribute="top" secondItem="exW-NU-mWH" secondAttribute="top" constant="20" id="0Tb-Q5-PjT"/>
                             <constraint firstItem="exW-NU-mWH" firstAttribute="bottom" secondItem="0mh-W6-yvM" secondAttribute="bottom" constant="100" id="8Bg-z2-reL"/>
@@ -582,6 +637,9 @@
                             <constraint firstItem="0mh-W6-yvM" firstAttribute="leading" secondItem="exW-NU-mWH" secondAttribute="leading" constant="20" id="plr-mZ-DAQ"/>
                             <constraint firstItem="BHq-PJ-UkE" firstAttribute="top" secondItem="0mh-W6-yvM" secondAttribute="bottom" constant="20" id="xyC-3K-pvA"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iOi-XD-jI7" appends="YES" id="LZd-Kh-tzM"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="uRl-Tx-RjY"/>
                     <connections>
@@ -589,6 +647,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwC-xB-Z4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="iOi-XD-jI7">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="backSwipe:" destination="3XL-kT-Mci" id="QTD-68-liP"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1379.7101449275362" y="1455.8035714285713"/>
         </scene>
@@ -658,16 +722,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ufg-iQ-d1u"/>
+        <segue reference="hrK-wq-cxt"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="chevron.up" catalog="system" width="128" height="72"/>
         <image name="hand.raised.slash" catalog="system" width="128" height="128"/>
         <image name="minus.square" catalog="system" width="128" height="114"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
+        <image name="scryptdLogo1.png" width="1024" height="1024"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

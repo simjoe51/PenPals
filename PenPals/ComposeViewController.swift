@@ -29,6 +29,11 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         //let recipientPublicKey = Curve25519.KeyAgreement.PublicKey(rawRepresentation: <#T##ContiguousBytes#>)
     }
     
+    @IBAction func backSwipe(_ sender: UIScreenEdgePanGestureRecognizer) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

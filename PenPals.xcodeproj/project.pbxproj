@@ -17,6 +17,8 @@
 		CA707FF025D2FFFA000C03C7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA707FEE25D2FFFA000C03C7 /* Model.xcdatamodeld */; };
 		CA7CA89725ACC50600658F73 /* createAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7CA89625ACC50600658F73 /* createAccountViewController.swift */; };
 		CA83515E25DD59D80053EE05 /* ScryptdIconset in Resources */ = {isa = PBXBuildFile; fileRef = CA83515D25DD59D80053EE05 /* ScryptdIconset */; };
+		CA83516625DE24CE0053EE05 /* scryptdLogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = CA83516525DE24CE0053EE05 /* scryptdLogo1.png */; };
+		CA83516B25DE28A80053EE05 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83516A25DE28A80053EE05 /* MenuViewController.swift */; };
 		CA8F2B6E25B9E7EE00FF471D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */; };
 		CABCEFCC25A95C51000FD38A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CABCEFCB25A95C51000FD38A /* Alamofire */; };
 		CABCEFD425A95CB8000FD38A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABCEFD325A95CB8000FD38A /* OnboardingViewController.swift */; };
@@ -61,6 +63,8 @@
 		CA707FEF25D2FFFA000C03C7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CA7CA89625ACC50600658F73 /* createAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createAccountViewController.swift; sourceTree = "<group>"; };
 		CA83515D25DD59D80053EE05 /* ScryptdIconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ScryptdIconset; sourceTree = "<group>"; };
+		CA83516525DE24CE0053EE05 /* scryptdLogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scryptdLogo1.png; sourceTree = "<group>"; };
+		CA83516A25DE28A80053EE05 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CABCEFD325A95CB8000FD38A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CABCEFE225AA2C56000FD38A /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				CA48C7DE254C6E1600669BEA /* AppDelegate.swift */,
 				CA48C7E0254C6E1600669BEA /* SceneDelegate.swift */,
 				CA48C7E4254C6E1600669BEA /* Main.storyboard */,
+				CA83516A25DE28A80053EE05 /* MenuViewController.swift */,
 				CA8F2B6D25B9E7EE00FF471D /* HomeViewController.swift */,
 				CAC08F3E25BA8B0B00638820 /* ComposeViewController.swift */,
 				CA7CA89625ACC50600658F73 /* createAccountViewController.swift */,
@@ -137,6 +142,7 @@
 				CA48C7E9254C6E1900669BEA /* LaunchScreen.storyboard */,
 				CA48C7EC254C6E1900669BEA /* Info.plist */,
 				CA707FEE25D2FFFA000C03C7 /* Model.xcdatamodeld */,
+				CA83516525DE24CE0053EE05 /* scryptdLogo1.png */,
 				CA83515D25DD59D80053EE05 /* ScryptdIconset */,
 			);
 			path = PenPals;
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA83515E25DD59D80053EE05 /* ScryptdIconset in Resources */,
+				CA83516625DE24CE0053EE05 /* scryptdLogo1.png in Resources */,
 				CA48C7EB254C6E1900669BEA /* LaunchScreen.storyboard in Resources */,
 				CA48C7E8254C6E1900669BEA /* Assets.xcassets in Resources */,
 				CA48C7E6254C6E1600669BEA /* Main.storyboard in Resources */,
@@ -309,6 +316,7 @@
 				CA7CA89725ACC50600658F73 /* createAccountViewController.swift in Sources */,
 				CABCEFED25AAB590000FD38A /* MoreOnboardingViewController.swift in Sources */,
 				CABCEFE825AA2F6E000FD38A /* InitialViewController.swift in Sources */,
+				CA83516B25DE28A80053EE05 /* MenuViewController.swift in Sources */,
 				CA8F2B6E25B9E7EE00FF471D /* HomeViewController.swift in Sources */,
 				CA48C7DF254C6E1600669BEA /* AppDelegate.swift in Sources */,
 				CABCEFD425A95CB8000FD38A /* OnboardingViewController.swift in Sources */,
